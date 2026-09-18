@@ -1,0 +1,1854 @@
+{
+  "_comment": "ISO 22163:2023 8장(운용) 요구사항 레지스트리.",
+  "clauses": [
+    {
+      "id": "8.1",
+      "title_ko": "운용 기획 및 관리",
+      "title_en": "Operational planning and control",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "PRJ",
+        "PSP"
+      ],
+      "documented_info": [
+        "operational_plan"
+      ],
+      "modules": [
+        "rqms.services.projects",
+        "rqms.services.production"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.1.1.1",
+      "title_ko": "혁신 관리 프로세스",
+      "title_en": "Innovation management",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "INN"
+      ],
+      "documented_info": [
+        "innovation_record"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.1.1.2",
+      "title_ko": "프로세스 이전 계획 프로세스(타당성조사·리스크평가·FAI)",
+      "title_en": "Planning of the transfer of processes",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "TRF"
+      ],
+      "documented_info": [
+        "transfer_record"
+      ],
+      "modules": [
+        "rqms.services.transfer"
+      ],
+      "controls": [
+        "CTL-035"
+      ]
+    },
+    {
+      "id": "8.1.2",
+      "title_ko": "입찰 관리 프로세스",
+      "title_en": "Tender management process",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "TDR"
+      ],
+      "documented_info": [
+        "tender_record",
+        "tender_approval"
+      ],
+      "modules": [
+        "rqms.services.tender"
+      ],
+      "controls": [
+        "CTL-008"
+      ]
+    },
+    {
+      "id": "8.1.3.1.1",
+      "title_ko": "프로젝트 관리 프로세스(단계·게이트·마일스톤·미결사항)",
+      "title_en": "Project management process",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ"
+      ],
+      "documented_info": [
+        "project_record",
+        "gate_checklist"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": [
+        "CTL-004"
+      ]
+    },
+    {
+      "id": "8.1.3.1.2",
+      "title_ko": "에스컬레이션·SWOT 검토·프로젝트 종료 교훈",
+      "title_en": "Project management process — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "PRJ",
+        "KNW"
+      ],
+      "documented_info": [
+        "lesson_learned"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.1.3.1.3",
+      "title_ko": "프로젝트 문서화된 정보 및 단계검토(미결사항 종결 요건)",
+      "title_en": "Project documented information and phase reviews",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ"
+      ],
+      "documented_info": [
+        "phase_review_record",
+        "project_record"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": [
+        "CTL-004"
+      ]
+    },
+    {
+      "id": "8.1.3.2",
+      "title_ko": "프로젝트 관리계획서",
+      "title_en": "Project management plan",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ"
+      ],
+      "documented_info": [
+        "project_management_plan"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": [
+        "CTL-044"
+      ]
+    },
+    {
+      "id": "8.1.3.3",
+      "title_ko": "프로젝트 범위 관리(WBS·작업패키지·승인 없는 범위변경 금지)",
+      "title_en": "Project scope management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ"
+      ],
+      "documented_info": [
+        "work_breakdown_structure"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": [
+        "CTL-005"
+      ]
+    },
+    {
+      "id": "8.1.3.4",
+      "title_ko": "프로젝트 일정 관리(주공정·고객 인도일 변경 통제)",
+      "title_en": "Project time management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ"
+      ],
+      "documented_info": [
+        "project_schedule"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": [
+        "CTL-005"
+      ]
+    },
+    {
+      "id": "8.1.3.5",
+      "title_ko": "프로젝트 원가 관리(원가계정구조·EAC·예산 증액 통제)",
+      "title_en": "Project cost management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ"
+      ],
+      "documented_info": [
+        "project_cost_record"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": [
+        "CTL-005"
+      ]
+    },
+    {
+      "id": "8.1.3.6",
+      "title_ko": "프로젝트 품질계획서",
+      "title_en": "Project quality management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ"
+      ],
+      "documented_info": [
+        "project_quality_plan"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": [
+        "CTL-044"
+      ]
+    },
+    {
+      "id": "8.1.3.7",
+      "title_ko": "프로젝트 인적자원 관리 및 인력계획서",
+      "title_en": "Project human resource management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ",
+        "CMP"
+      ],
+      "documented_info": [
+        "project_hr_plan"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": [
+        "CTL-044"
+      ]
+    },
+    {
+      "id": "8.1.3.8",
+      "title_ko": "프로젝트 의사소통 관리 및 의사소통계획서",
+      "title_en": "Project communication management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ",
+        "COM"
+      ],
+      "documented_info": [
+        "project_communication_plan"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": [
+        "CTL-044"
+      ]
+    },
+    {
+      "id": "8.1.3.9.1",
+      "title_ko": "프로젝트 리스크·기회 등록부(비용편익 분석 포함)",
+      "title_en": "Project risk and opportunities management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ",
+        "ROM"
+      ],
+      "documented_info": [
+        "risk_register"
+      ],
+      "modules": [
+        "rqms.services.projects",
+        "rqms.services.risk"
+      ],
+      "controls": [
+        "CTL-042"
+      ]
+    },
+    {
+      "id": "8.1.3.9.2",
+      "title_ko": "라인관리자 참여·운용성숙도 고려·기회 관리",
+      "title_en": "Project risk and opportunities — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "PRJ",
+        "ROM"
+      ],
+      "documented_info": [
+        "risk_register"
+      ],
+      "modules": [
+        "rqms.services.risk"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.1.3.10",
+      "title_ko": "프로젝트 조달 관리(8.4 요구사항 적용)",
+      "title_en": "Project procurement management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ",
+        "EPP"
+      ],
+      "documented_info": [
+        "purchase_order"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-011"
+      ]
+    },
+    {
+      "id": "8.1.3.11",
+      "title_ko": "프로젝트 검토 관리(정기 진도검토·이탈 대책)",
+      "title_en": "Project review management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PRJ"
+      ],
+      "documented_info": [
+        "project_review_record"
+      ],
+      "modules": [
+        "rqms.services.projects"
+      ],
+      "controls": [
+        "CTL-045"
+      ]
+    },
+    {
+      "id": "8.1.4.1.1",
+      "title_ko": "형상관리 프로세스(PBS·형상항목·기준선·형상상태기록)",
+      "title_en": "Configuration management process",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "CFG"
+      ],
+      "documented_info": [
+        "configuration_management_plan",
+        "configuration_baseline",
+        "configuration_status_record"
+      ],
+      "modules": [
+        "rqms.services.configuration"
+      ],
+      "controls": [
+        "CTL-006",
+        "CTL-007"
+      ]
+    },
+    {
+      "id": "8.1.4.1.2",
+      "title_ko": "형상감사·외부공급자 형상관리 연계·툴 지원",
+      "title_en": "Configuration management — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "CFG"
+      ],
+      "documented_info": [
+        "configuration_audit_record"
+      ],
+      "modules": [
+        "rqms.services.configuration"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.1.4.2",
+      "title_ko": "변경 관리 프로세스(영향분석·승인·실행·검증·추적성)",
+      "title_en": "Change control process",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "CHG"
+      ],
+      "documented_info": [
+        "change_request",
+        "change_impact_analysis"
+      ],
+      "modules": [
+        "rqms.services.change"
+      ],
+      "controls": [
+        "CTL-027",
+        "CTL-028"
+      ]
+    },
+    {
+      "id": "8.2.1",
+      "title_ko": "고객과의 의사소통",
+      "title_en": "Customer communication",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "CSA",
+        "COM"
+      ],
+      "documented_info": [
+        "customer_communication_record"
+      ],
+      "modules": [
+        "rqms.services.customer"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.2.1.1",
+      "title_ko": "불가피한 지연 발생 시 고객 통보",
+      "title_en": "Customer communication — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "CSA",
+        "PRJ"
+      ],
+      "documented_info": [
+        "customer_communication_record"
+      ],
+      "modules": [
+        "rqms.services.customer"
+      ],
+      "controls": [
+        "CTL-028"
+      ]
+    },
+    {
+      "id": "8.2.2",
+      "title_ko": "제품 및 서비스 요구사항의 결정",
+      "title_en": "Determining the requirements related to products and services",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "REQ"
+      ],
+      "documented_info": [
+        "requirement_register"
+      ],
+      "modules": [
+        "rqms.services.requirements"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.2.2.1.1",
+      "title_ko": "기능·비기능·RAMS/LCC·단산·중요특성 요구사항 고려",
+      "title_en": "Determining the requirements — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "REQ",
+        "RAM",
+        "OBS"
+      ],
+      "documented_info": [
+        "requirement_register"
+      ],
+      "modules": [
+        "rqms.services.requirements"
+      ],
+      "controls": [
+        "CTL-046"
+      ]
+    },
+    {
+      "id": "8.2.2.1.2",
+      "title_ko": "유사 경험·시장분석·제품수명종료 요구사항 고려",
+      "title_en": "Determining the requirements — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "REQ"
+      ],
+      "documented_info": [
+        "requirement_register"
+      ],
+      "modules": [
+        "rqms.services.requirements"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.2.2.1.3",
+      "title_ko": "요구사항 결정 관련 문서화된 정보 보유",
+      "title_en": "Determining the requirements — retained information",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "REQ",
+        "DIC"
+      ],
+      "documented_info": [
+        "requirement_register"
+      ],
+      "modules": [
+        "rqms.services.requirements"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.2.3.1",
+      "title_ko": "공급 확약 전 요구사항 검토",
+      "title_en": "Review of requirements related to products and services",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "REQ",
+        "TDR"
+      ],
+      "documented_info": [
+        "requirement_review_record"
+      ],
+      "modules": [
+        "rqms.services.requirements"
+      ],
+      "controls": [
+        "CTL-008"
+      ]
+    },
+    {
+      "id": "8.2.3.2",
+      "title_ko": "요구사항 검토 결과 문서화",
+      "title_en": "Review of requirements — retained information",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "REQ"
+      ],
+      "documented_info": [
+        "requirement_review_record"
+      ],
+      "modules": [
+        "rqms.services.requirements"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.2.4",
+      "title_ko": "제품 및 서비스 요구사항의 변경",
+      "title_en": "Changes to requirements for products and services",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "REQ",
+        "CHG"
+      ],
+      "documented_info": [
+        "change_request",
+        "requirement_register"
+      ],
+      "modules": [
+        "rqms.services.requirements",
+        "rqms.services.change"
+      ],
+      "controls": [
+        "CTL-027"
+      ]
+    },
+    {
+      "id": "8.2.5",
+      "title_ko": "요구사항 관리 프로세스(결정·검토·검증·유효성확인, 조항별 확인)",
+      "title_en": "Requirement management process",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "REQ"
+      ],
+      "documented_info": [
+        "requirement_register",
+        "technical_specification"
+      ],
+      "modules": [
+        "rqms.services.requirements"
+      ],
+      "controls": [
+        "CTL-008",
+        "CTL-046"
+      ]
+    },
+    {
+      "id": "8.3.1",
+      "title_ko": "설계 및 개발 프로세스",
+      "title_en": "Design and development — General",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DND"
+      ],
+      "documented_info": [
+        "design_plan"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.3.1.1",
+      "title_ko": "신기술 리스크 평가, 제품 아키텍처, RAMS/LCC, IEC 62278 적합",
+      "title_en": "Design and development — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "DND",
+        "RAM",
+        "SAF"
+      ],
+      "documented_info": [
+        "design_plan",
+        "safety_case"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": [
+        "CTL-057"
+      ]
+    },
+    {
+      "id": "8.3.2",
+      "title_ko": "설계 및 개발 기획",
+      "title_en": "Design and development planning",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DND"
+      ],
+      "documented_info": [
+        "design_plan"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.3.2.1.1",
+      "title_ko": "단계 목표·아키텍처·형상관리·계층별 설계검토/검증/유효성확인",
+      "title_en": "Design and development planning — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "DND",
+        "CFG"
+      ],
+      "documented_info": [
+        "design_plan"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": [
+        "CTL-047"
+      ]
+    },
+    {
+      "id": "8.3.2.1.2",
+      "title_ko": "단계별 품질보증 기법·기술요구사항·운용성숙도 통제 방법",
+      "title_en": "Design and development planning — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "DND"
+      ],
+      "documented_info": [
+        "design_plan"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.3.3",
+      "title_ko": "설계 및 개발 입력",
+      "title_en": "Design and development inputs",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DND"
+      ],
+      "documented_info": [
+        "design_input"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": [
+        "CTL-060"
+      ]
+    },
+    {
+      "id": "8.3.3.1.1",
+      "title_ko": "8.2.2 요구사항 및 식별·추적성 고려",
+      "title_en": "Design and development inputs — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "DND",
+        "REQ"
+      ],
+      "documented_info": [
+        "design_input"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": [
+        "CTL-060"
+      ]
+    },
+    {
+      "id": "8.3.3.1.2",
+      "title_ko": "생산·routine test 요구사항 및 보존 요구사항 고려",
+      "title_en": "Design and development inputs — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "DND",
+        "PSP"
+      ],
+      "documented_info": [
+        "design_input"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.3.4",
+      "title_ko": "설계 및 개발 관리",
+      "title_en": "Design and development controls",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DND"
+      ],
+      "documented_info": [
+        "design_review_record",
+        "verification_record",
+        "validation_record"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.3.4.1",
+      "title_ko": "기능분해·운용성숙도·품질보증 기법 고려",
+      "title_en": "Design and development controls — Supplemental",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "DND"
+      ],
+      "documented_info": [
+        "design_review_record"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.3.4.2",
+      "title_ko": "설계검토(다음 단계 진행 승인기준·필수 참석자·의사결정 권한)",
+      "title_en": "Design reviews",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "DND"
+      ],
+      "documented_info": [
+        "design_review_record"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": [
+        "CTL-058"
+      ]
+    },
+    {
+      "id": "8.3.4.3",
+      "title_ko": "설계검증(기술요구사항 검증)",
+      "title_en": "Design verification",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "DND",
+        "REQ"
+      ],
+      "documented_info": [
+        "verification_record"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": [
+        "CTL-046"
+      ]
+    },
+    {
+      "id": "8.3.4.4",
+      "title_ko": "설계 유효성확인(인도/시운전 종료 전 완료 또는 고객 합의 관리계획)",
+      "title_en": "Design validation",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "DND"
+      ],
+      "documented_info": [
+        "validation_record"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": [
+        "CTL-010"
+      ]
+    },
+    {
+      "id": "8.3.4.5",
+      "title_ko": "검증·유효성확인 시험 요구사항(재현성·형상기준선·합격기준)",
+      "title_en": "Design verification and validation test requirements",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "DND",
+        "CFG"
+      ],
+      "documented_info": [
+        "test_plan",
+        "test_record"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": [
+        "CTL-047"
+      ]
+    },
+    {
+      "id": "8.3.5",
+      "title_ko": "설계 및 개발 출력",
+      "title_en": "Design and development outputs",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DND"
+      ],
+      "documented_info": [
+        "design_output"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.3.5.1.1",
+      "title_ko": "출력의 출시 전 검증·승인, 생산입력 대비 검증, 관련 문서·교육 포함",
+      "title_en": "Design and development outputs — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "DND",
+        "PSP"
+      ],
+      "documented_info": [
+        "design_output"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": [
+        "CTL-009"
+      ]
+    },
+    {
+      "id": "8.3.5.1.2",
+      "title_ko": "입력-출력 추적성, 설계승인 권한·합격기준, 에스컬레이션 규칙",
+      "title_en": "Design and development outputs — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "DND"
+      ],
+      "documented_info": [
+        "design_output"
+      ],
+      "modules": [
+        "rqms.services.design"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.3.6",
+      "title_ko": "설계 및 개발 변경",
+      "title_en": "Design and development changes",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DND",
+        "CHG"
+      ],
+      "documented_info": [
+        "change_request"
+      ],
+      "modules": [
+        "rqms.services.change"
+      ],
+      "controls": [
+        "CTL-027"
+      ]
+    },
+    {
+      "id": "8.4.1",
+      "title_ko": "외부에서 제공되는 프로세스·제품·서비스의 관리 — 일반",
+      "title_en": "Control of externally provided processes, products and services",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "supplier_register",
+        "supplier_evaluation_record"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.4.1.1.1",
+      "title_ko": "EPPPS 프로세스(분류·평가·승인·선정·정보·출시승인·검증·성과감시)",
+      "title_en": "External providers",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "supplier_register",
+        "supplier_evaluation_record"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-011",
+        "CTL-048"
+      ]
+    },
+    {
+      "id": "8.4.1.1.2",
+      "title_ko": "외부공급자 및 EPPPS 분류(핵심 공급자 식별·정기 재검토)",
+      "title_en": "Classification of external providers and EPPPS",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "supplier_register"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-048"
+      ]
+    },
+    {
+      "id": "8.4.1.1.3",
+      "title_ko": "외부공급자 평가(인원·기반구조·프로세스·인증 보유)",
+      "title_en": "Evaluation of external providers",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "supplier_evaluation_record"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-048"
+      ]
+    },
+    {
+      "id": "8.4.1.1.4",
+      "title_ko": "외부공급자 승인(기준·거부권한·승인 공급자 등록부), 승인자만 공급",
+      "title_en": "Approval of external providers",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "supplier_register"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-011"
+      ]
+    },
+    {
+      "id": "8.4.1.1.5.1",
+      "title_ko": "견적 선정 분석(조항별 적합성·총소유비용/LCC·과거 QCD 성과·분류)",
+      "title_en": "External provider offer selection",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "EPP",
+        "LCC"
+      ],
+      "documented_info": [
+        "offer_selection_record"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-048"
+      ]
+    },
+    {
+      "id": "8.4.1.1.5.2",
+      "title_ko": "리스크 분석 결과·운용성숙도 고려, 발주 전 기술요구사항 상호확인",
+      "title_en": "External provider offer selection — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "offer_selection_record"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.4.2",
+      "title_ko": "관리의 유형과 정도",
+      "title_en": "Type and extent of control",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "supplier_control_plan"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.4.2.1.1",
+      "title_ko": "신규/변경 EPPPS 출시승인(FAI·유효성확인·형상기준선)",
+      "title_en": "EPPPS approval of release",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "EPP",
+        "FAI",
+        "CFG"
+      ],
+      "documented_info": [
+        "eppps_release_approval"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-016"
+      ]
+    },
+    {
+      "id": "8.4.2.1.2",
+      "title_ko": "양산 전 검토 및 최초 시스템 통합 고려",
+      "title_en": "EPPPS approval of release — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "eppps_release_approval"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.4.2.2",
+      "title_ko": "출시 후 EPPPS 검증(미검증 사용금지·검사계획·위임 등록부)",
+      "title_en": "EPPPS verification after release",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "EPP",
+        "NCO"
+      ],
+      "documented_info": [
+        "incoming_inspection_record",
+        "delegation_register"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-012",
+        "CTL-013"
+      ]
+    },
+    {
+      "id": "8.4.2.3",
+      "title_ko": "외부공급자 성과 감시·재평가·등급화 및 개발 조치계획",
+      "title_en": "Monitoring of external providers' performance, re-evaluation and ranking",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "supplier_performance_review"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-048"
+      ]
+    },
+    {
+      "id": "8.4.3",
+      "title_ko": "외부공급자에 대한 정보",
+      "title_en": "Information for external providers",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "purchase_order"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.4.3.1",
+      "title_ko": "요구사항 전개·개정 식별·특수공정 승인·제품 중요도·출입권",
+      "title_en": "Information for external providers — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "EPP",
+        "REQ",
+        "SPP"
+      ],
+      "documented_info": [
+        "purchase_order"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-049"
+      ]
+    },
+    {
+      "id": "8.4.4",
+      "title_ko": "공급망 관리(발주 확인서 수령·변경요청 문서화·납기 예측 공유)",
+      "title_en": "Supply chain management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "EPP"
+      ],
+      "documented_info": [
+        "purchase_order",
+        "po_acknowledgement"
+      ],
+      "modules": [
+        "rqms.services.suppliers"
+      ],
+      "controls": [
+        "CTL-049"
+      ]
+    },
+    {
+      "id": "8.5.1",
+      "title_ko": "생산 및 서비스 제공의 관리",
+      "title_en": "Control of production and service provision",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "production_order",
+        "inspection_record"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.5.1.1.1",
+      "title_ko": "생산 및 서비스 제공 프로세스",
+      "title_en": "Process for production and service provision",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "production_order"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.5.1.1.2",
+      "title_ko": "관리된 조건(승인된 생산데이터·전 교대 감시·리스크평가·재작업 통제)",
+      "title_en": "Controlled conditions",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "production_order",
+        "production_data_approval"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": [
+        "CTL-050"
+      ]
+    },
+    {
+      "id": "8.5.1.1.3",
+      "title_ko": "생산공정 검증(설계출력 대비 입력 완전성·설비능력·공정FMEA)",
+      "title_en": "Verification of the process for production and service provision",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PSP",
+        "DND"
+      ],
+      "documented_info": [
+        "process_verification_record"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": [
+        "CTL-050"
+      ]
+    },
+    {
+      "id": "8.5.1.1.4.1",
+      "title_ko": "생산공정 유효성확인(FAI 완료·고객 인계 전 완료·변경 시 재확인)",
+      "title_en": "Validation of the process for production and service provision",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PSP",
+        "FAI"
+      ],
+      "documented_info": [
+        "process_validation_record"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": [
+        "CTL-016"
+      ]
+    },
+    {
+      "id": "8.5.1.1.4.2",
+      "title_ko": "측정능력·공정능력 연구 및 공차 분석",
+      "title_en": "Validation of the process — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "process_validation_record"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.5.1.2.1",
+      "title_ko": "생산 일정계획(단·중·장기, 소프트웨어 지원, 애로공정 식별)",
+      "title_en": "Production scheduling",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "master_production_schedule"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": [
+        "CTL-050"
+      ]
+    },
+    {
+      "id": "8.5.1.2.2",
+      "title_ko": "리스크분석·과거경험·효율 측정 고려 및 개선계획",
+      "title_en": "Production scheduling — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "master_production_schedule"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.5.1.3",
+      "title_ko": "특수공정 관리 프로세스(식별·표준·리스크평가·인원자격·공정자격)",
+      "title_en": "Special processes",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "SPP"
+      ],
+      "documented_info": [
+        "special_process_qualification",
+        "operator_qualification"
+      ],
+      "modules": [
+        "rqms.services.special_processes"
+      ],
+      "controls": [
+        "CTL-014"
+      ]
+    },
+    {
+      "id": "8.5.1.4.1",
+      "title_ko": "생산설비 관리(예방정비·검증·최초사용 전 유효성확인·개별식별·주기점검)",
+      "title_en": "Production equipment",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "equipment_register",
+        "maintenance_record"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": [
+        "CTL-051"
+      ]
+    },
+    {
+      "id": "8.5.1.4.2",
+      "title_ko": "생산설비에 설계개발 프로세스 적용 및 예측정비",
+      "title_en": "Production equipment — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "maintenance_record"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.5.2",
+      "title_ko": "식별 및 추적성",
+      "title_en": "Identification and traceability",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "PSP",
+        "CFG"
+      ],
+      "documented_info": [
+        "traceability_record"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.5.2.1",
+      "title_ko": "보증종료까지 추적성 유지, 상태불명 제품은 부적합품 처리",
+      "title_en": "Identification and traceability — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PSP",
+        "CFG",
+        "NCO"
+      ],
+      "documented_info": [
+        "traceability_record"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": [
+        "CTL-015",
+        "CTL-032"
+      ]
+    },
+    {
+      "id": "8.5.3",
+      "title_ko": "고객 또는 외부공급자의 소유물",
+      "title_en": "Property belonging to customers or external providers",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "customer_property_register"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.5.3.1",
+      "title_ko": "소유물의 인도/반환 시점까지 추적성 관리",
+      "title_en": "Property belonging to customers — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "customer_property_register"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": [
+        "CTL-052"
+      ]
+    },
+    {
+      "id": "8.5.4",
+      "title_ko": "보존",
+      "title_en": "Preservation",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "preservation_specification"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.5.4.1",
+      "title_ko": "보존 규격 문서화(표시·취급·청정·유효기간·환경조건)",
+      "title_en": "Preservation — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "preservation_specification"
+      ],
+      "modules": [
+        "rqms.services.production"
+      ],
+      "controls": [
+        "CTL-052"
+      ]
+    },
+    {
+      "id": "8.5.5",
+      "title_ko": "인도 후 활동",
+      "title_en": "Post-delivery activities",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "PDA"
+      ],
+      "documented_info": [
+        "post_delivery_record"
+      ],
+      "modules": [
+        "rqms.services.post_delivery"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.5.5.1",
+      "title_ko": "인도 후 활동 프로세스(기술문서 갱신·문제해결기법·수리지침·예비품)",
+      "title_en": "Post-delivery activities — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "PDA",
+        "RAM"
+      ],
+      "documented_info": [
+        "post_delivery_record",
+        "repair_instruction"
+      ],
+      "modules": [
+        "rqms.services.post_delivery"
+      ],
+      "controls": [
+        "CTL-059"
+      ]
+    },
+    {
+      "id": "8.5.6",
+      "title_ko": "변경의 관리(생산·서비스 제공)",
+      "title_en": "Control of changes",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "CHG",
+        "PSP"
+      ],
+      "documented_info": [
+        "change_request"
+      ],
+      "modules": [
+        "rqms.services.change"
+      ],
+      "controls": [
+        "CTL-027"
+      ]
+    },
+    {
+      "id": "8.6",
+      "title_ko": "제품 및 서비스의 출하",
+      "title_en": "Release of products and services",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "REL"
+      ],
+      "documented_info": [
+        "release_record"
+      ],
+      "modules": [
+        "rqms.services.release"
+      ],
+      "controls": [
+        "CTL-017"
+      ]
+    },
+    {
+      "id": "8.6.1",
+      "title_ko": "검사·시험계획(ITP)·합격기준·출하권한, 미완료 시 고객 특채",
+      "title_en": "Release of products and services — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "REL",
+        "NCO"
+      ],
+      "documented_info": [
+        "inspection_test_plan",
+        "release_record",
+        "inspection_record"
+      ],
+      "modules": [
+        "rqms.services.release"
+      ],
+      "controls": [
+        "CTL-017"
+      ]
+    },
+    {
+      "id": "8.7.1",
+      "title_ko": "부적합 출력의 식별 및 관리",
+      "title_en": "Control of nonconforming outputs",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "NCO"
+      ],
+      "documented_info": [
+        "nonconformity_record"
+      ],
+      "modules": [
+        "rqms.services.nonconformity"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.7.2",
+      "title_ko": "부적합·조치·특채·결정권한 문서화",
+      "title_en": "Control of nonconforming outputs — retained information",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "NCO"
+      ],
+      "documented_info": [
+        "nonconformity_record"
+      ],
+      "modules": [
+        "rqms.services.nonconformity"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.7.3",
+      "title_ko": "부적합 출력 관리 프로세스(등록부·특채 등록부·만료·고객승인)",
+      "title_en": "Control of nonconforming outputs — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "NCO",
+        "NCA"
+      ],
+      "documented_info": [
+        "nonconformity_record",
+        "concession_register"
+      ],
+      "modules": [
+        "rqms.services.nonconformity"
+      ],
+      "controls": [
+        "CTL-018",
+        "CTL-019"
+      ]
+    },
+    {
+      "id": "8.8.1",
+      "title_ko": "RAM·안전 프로세스 운영 및 문서화된 정보 보유",
+      "title_en": "RAMS and LCC — General",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "RAM",
+        "SAF"
+      ],
+      "documented_info": [
+        "rams_record"
+      ],
+      "modules": [
+        "rqms.services.rams"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.8.2",
+      "title_ko": "RAM 관리 프로세스(계산·설계반영·현장데이터·환류·목표감시)",
+      "title_en": "Reliability, availability and maintainability",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "RAM",
+        "PDA"
+      ],
+      "documented_info": [
+        "rams_record",
+        "field_data_record"
+      ],
+      "modules": [
+        "rqms.services.rams"
+      ],
+      "controls": [
+        "CTL-029"
+      ]
+    },
+    {
+      "id": "8.8.3",
+      "title_ko": "제품·서비스 안전 관리 프로세스(안전관련 제품 공급 시)",
+      "title_en": "Safety",
+      "obligation": "shall_conditional",
+      "applicability_condition": "안전관련 기계/전기·전자·프로그래머블 전자 제품·서비스를 공급하는 경우",
+      "source": "iso22163",
+      "processes": [
+        "SAF"
+      ],
+      "documented_info": [
+        "safety_case",
+        "safety_standard_register"
+      ],
+      "modules": [
+        "rqms.services.rams"
+      ],
+      "controls": [
+        "CTL-057"
+      ]
+    },
+    {
+      "id": "8.8.4",
+      "title_ko": "수명주기비용(LCC) 관리 프로세스",
+      "title_en": "Life cycle costing",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "LCC"
+      ],
+      "documented_info": [
+        "lcc_record"
+      ],
+      "modules": [
+        "rqms.services.rams"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.9.1",
+      "title_ko": "FAI 관리 프로세스(계획·준비·검사·합격/조건부/거부 기준·시정조치)",
+      "title_en": "FAI management process",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "FAI"
+      ],
+      "documented_info": [
+        "fai_record"
+      ],
+      "modules": [
+        "rqms.services.fai"
+      ],
+      "controls": [
+        "CTL-016"
+      ]
+    },
+    {
+      "id": "8.9.2",
+      "title_ko": "FAI 사전조건 및 참석자 정의",
+      "title_en": "FAI — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "FAI"
+      ],
+      "documented_info": [
+        "fai_record"
+      ],
+      "modules": [
+        "rqms.services.fai"
+      ],
+      "controls": []
+    },
+    {
+      "id": "8.9.3",
+      "title_ko": "FAI 적용 대상(내부제품·EPPPS, 신제품/중대변경 후 대표품)",
+      "title_en": "FAI application",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "FAI",
+        "EPP",
+        "PSP"
+      ],
+      "documented_info": [
+        "fai_record"
+      ],
+      "modules": [
+        "rqms.services.fai"
+      ],
+      "controls": [
+        "CTL-016"
+      ]
+    },
+    {
+      "id": "8.10",
+      "title_ko": "단산(진부화) 관리 프로세스(리스크평가·관리계획·고객 의사소통)",
+      "title_en": "Obsolescence management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "OBS"
+      ],
+      "documented_info": [
+        "obsolescence_management_plan",
+        "obsolescence_risk_record"
+      ],
+      "modules": [
+        "rqms.services.obsolescence"
+      ],
+      "controls": [
+        "CTL-030"
+      ]
+    }
+  ]
+}

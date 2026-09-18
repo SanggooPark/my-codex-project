@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 레지스트리 정합성 및 통제 테스트
+        run: python -m unittest discover -s tests -v
+        env:
+          PYTHONPATH: src
+
+      - name: QMS 문서-레지스트리 동기 확인
+        run: python tools/generate_qms_docs.py --check
+
+      - name: 시연 RQMS 구축 후 적합성 평가 (갭이 있으면 실패)
+        run: |
+          python -m rqms init --db ci.db --seed
+          python -m rqms conformity --db ci.db
+          python -m rqms check --db ci.db
+        env:
+          PYTHONPATH: src
+
+      - name: 린트
+        run: |
+          pip install ruff
+          ruff check .

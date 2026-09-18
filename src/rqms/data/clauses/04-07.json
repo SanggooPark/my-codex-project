@@ -1,0 +1,871 @@
+{
+  "_comment": "ISO 22163:2023 4~7장 요구사항 레지스트리. source=iso9001 은 박스 본문(ISO 9001:2015), source=iso22163 은 철도 부문 추가 요구사항입니다. obligation=shall 은 필수, should 는 권고입니다.",
+  "clauses": [
+    {
+      "id": "4.1",
+      "title_ko": "조직과 그 상황의 이해",
+      "title_en": "Understanding the organization and its context",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "ROM"
+      ],
+      "documented_info": [
+        "context_issue_register"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": []
+    },
+    {
+      "id": "4.1.1.1",
+      "title_ko": "사업계획 수립 및 연간 검토",
+      "title_en": "Business planning",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "ROM",
+        "RES"
+      ],
+      "documented_info": [
+        "business_plan"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": [
+        "CTL-036"
+      ]
+    },
+    {
+      "id": "4.1.1.2",
+      "title_ko": "사업계획 추가 고려사항",
+      "title_en": "Business planning — additional considerations",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "ROM"
+      ],
+      "documented_info": [
+        "business_plan"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": []
+    },
+    {
+      "id": "4.1.2",
+      "title_ko": "사회적 책임",
+      "title_en": "Social responsibility",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "ROM"
+      ],
+      "documented_info": [
+        "social_responsibility_statement"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": []
+    },
+    {
+      "id": "4.2",
+      "title_ko": "이해관계자의 니즈와 기대 이해",
+      "title_en": "Understanding the needs and expectations of interested parties",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "ROM",
+        "COM"
+      ],
+      "documented_info": [
+        "interested_party_register"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": []
+    },
+    {
+      "id": "4.3",
+      "title_ko": "품질경영시스템 적용범위 결정",
+      "title_en": "Determining the scope of the quality management system",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "rqms_scope"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": [
+        "CTL-037"
+      ]
+    },
+    {
+      "id": "4.3.1",
+      "title_ko": "RQMS 고유 요구사항의 경계 및 적용성 결정",
+      "title_en": "Determining the scope — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [],
+      "documented_info": [
+        "rqms_scope",
+        "applicability_justification"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": [
+        "CTL-037"
+      ]
+    },
+    {
+      "id": "4.4.1",
+      "title_ko": "품질경영시스템과 그 프로세스",
+      "title_en": "Quality management system and its processes",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "process_description"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": [
+        "CTL-038"
+      ]
+    },
+    {
+      "id": "4.4.2",
+      "title_ko": "프로세스 운영 지원 및 실행 증거 문서화",
+      "title_en": "Maintain and retain documented information",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DIC"
+      ],
+      "documented_info": [
+        "process_description",
+        "process_record"
+      ],
+      "modules": [
+        "rqms.services.documents"
+      ],
+      "controls": []
+    },
+    {
+      "id": "4.4.3",
+      "title_ko": "프로세스 계층구조·교육·준수·리스크기반 통제기준",
+      "title_en": "Quality management system and its processes — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [],
+      "documented_info": [
+        "process_description",
+        "process_hierarchy",
+        "process_training_record"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": [
+        "CTL-038",
+        "CTL-039"
+      ]
+    },
+    {
+      "id": "5.1.1",
+      "title_ko": "리더십과 의지표명 — 일반",
+      "title_en": "Leadership and commitment — General",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "management_review_record"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": []
+    },
+    {
+      "id": "5.1.2",
+      "title_ko": "고객중심",
+      "title_en": "Customer focus",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "CSA"
+      ],
+      "documented_info": [
+        "management_review_record"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": []
+    },
+    {
+      "id": "5.2.1",
+      "title_ko": "품질방침 수립",
+      "title_en": "Establishing the quality policy",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "quality_policy"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": [
+        "CTL-040"
+      ]
+    },
+    {
+      "id": "5.2.2",
+      "title_ko": "품질방침의 의사소통",
+      "title_en": "Communicating the quality policy",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "COM"
+      ],
+      "documented_info": [
+        "quality_policy",
+        "communication_record"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": []
+    },
+    {
+      "id": "5.2.3",
+      "title_ko": "품질방침 — 고장예방·고객기대·안전 측면 반영",
+      "title_en": "Quality policy — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [],
+      "documented_info": [
+        "quality_policy"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": [
+        "CTL-040"
+      ]
+    },
+    {
+      "id": "5.3",
+      "title_ko": "조직의 역할, 책임 및 권한",
+      "title_en": "Organizational roles, responsibilities and authorities",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "role_assignment"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": []
+    },
+    {
+      "id": "5.3.1",
+      "title_ko": "KPI 정의, 프로세스 오너 임명, 독립 대표자의 공정 정지 권한",
+      "title_en": "Organizational roles, responsibilities and authorities — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [],
+      "documented_info": [
+        "role_assignment",
+        "kpi_definition",
+        "stop_authority_appointment"
+      ],
+      "modules": [
+        "rqms.services.governance",
+        "rqms.services.indicators"
+      ],
+      "controls": [
+        "CTL-031",
+        "CTL-041"
+      ]
+    },
+    {
+      "id": "5.3.2",
+      "title_ko": "프로세스 오너의 책임과 권한",
+      "title_en": "Responsibilities and authorities of process owners",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [],
+      "documented_info": [
+        "role_assignment"
+      ],
+      "modules": [
+        "rqms.services.governance"
+      ],
+      "controls": [
+        "CTL-041"
+      ]
+    },
+    {
+      "id": "6.1.1",
+      "title_ko": "리스크와 기회의 결정",
+      "title_en": "Actions to address risks and opportunities — determination",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "ROM"
+      ],
+      "documented_info": [
+        "risk_register"
+      ],
+      "modules": [
+        "rqms.services.risk"
+      ],
+      "controls": []
+    },
+    {
+      "id": "6.1.2",
+      "title_ko": "리스크와 기회에 대한 조치 기획",
+      "title_en": "Actions to address risks and opportunities — planning",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "ROM"
+      ],
+      "documented_info": [
+        "risk_register",
+        "risk_action"
+      ],
+      "modules": [
+        "rqms.services.risk"
+      ],
+      "controls": []
+    },
+    {
+      "id": "6.1.3.1",
+      "title_ko": "리스크 및 기회 관리 프로세스",
+      "title_en": "Risk and opportunity management process",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "ROM"
+      ],
+      "documented_info": [
+        "risk_register",
+        "risk_review_record",
+        "risk_action"
+      ],
+      "modules": [
+        "rqms.services.risk"
+      ],
+      "controls": [
+        "CTL-042"
+      ]
+    },
+    {
+      "id": "6.1.3.2",
+      "title_ko": "고객·외부공급자 참여 및 다기능 리스크 검토",
+      "title_en": "Risk and opportunity management — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "ROM"
+      ],
+      "documented_info": [
+        "risk_review_record"
+      ],
+      "modules": [
+        "rqms.services.risk"
+      ],
+      "controls": []
+    },
+    {
+      "id": "6.1.4",
+      "title_ko": "사업연속성",
+      "title_en": "Business continuity",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "ROM",
+        "RES"
+      ],
+      "documented_info": [
+        "business_continuity_plan"
+      ],
+      "modules": [
+        "rqms.services.risk"
+      ],
+      "controls": [
+        "CTL-034"
+      ]
+    },
+    {
+      "id": "6.2.1",
+      "title_ko": "품질목표 수립",
+      "title_en": "Quality objectives",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "quality_objective"
+      ],
+      "modules": [
+        "rqms.services.indicators"
+      ],
+      "controls": [
+        "CTL-043"
+      ]
+    },
+    {
+      "id": "6.2.2",
+      "title_ko": "품질목표 달성 기획",
+      "title_en": "Planning to achieve quality objectives",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "quality_objective"
+      ],
+      "modules": [
+        "rqms.services.indicators"
+      ],
+      "controls": [
+        "CTL-043"
+      ]
+    },
+    {
+      "id": "6.3",
+      "title_ko": "변경의 기획",
+      "title_en": "Planning of changes",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "CHG"
+      ],
+      "documented_info": [
+        "change_request"
+      ],
+      "modules": [
+        "rqms.services.change"
+      ],
+      "controls": [
+        "CTL-027"
+      ]
+    },
+    {
+      "id": "7.1.1",
+      "title_ko": "자원 — 일반",
+      "title_en": "Resources — General",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "RES"
+      ],
+      "documented_info": [
+        "resource_plan"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.1.1.1",
+      "title_ko": "자원 계획·승인·관리 프로세스",
+      "title_en": "Process for resource planning, approval and control",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "RES"
+      ],
+      "documented_info": [
+        "resource_plan"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": [
+        "CTL-038"
+      ]
+    },
+    {
+      "id": "7.1.2",
+      "title_ko": "인원",
+      "title_en": "People",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "RES",
+        "CMP"
+      ],
+      "documented_info": [
+        "resource_plan"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.1.3",
+      "title_ko": "기반구조",
+      "title_en": "Infrastructure",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "RES",
+        "PSP"
+      ],
+      "documented_info": [
+        "equipment_register"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.1.4",
+      "title_ko": "프로세스 운영 환경",
+      "title_en": "Environment for the operation of processes",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "PSP"
+      ],
+      "documented_info": [
+        "work_environment_record"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.1.5.1",
+      "title_ko": "모니터링 및 측정 자원 — 일반",
+      "title_en": "Monitoring and measuring resources — General",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "CAL"
+      ],
+      "documented_info": [
+        "measuring_resource_register"
+      ],
+      "modules": [
+        "rqms.services.calibration"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.1.5.2",
+      "title_ko": "측정 소급성",
+      "title_en": "Measurement traceability",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "CAL"
+      ],
+      "documented_info": [
+        "calibration_record"
+      ],
+      "modules": [
+        "rqms.services.calibration"
+      ],
+      "controls": [
+        "CTL-025"
+      ]
+    },
+    {
+      "id": "7.1.5.3",
+      "title_ko": "교정/검증 프로세스 및 자원 등록부",
+      "title_en": "Monitoring and measuring resources — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "CAL"
+      ],
+      "documented_info": [
+        "measuring_resource_register",
+        "calibration_record"
+      ],
+      "modules": [
+        "rqms.services.calibration"
+      ],
+      "controls": [
+        "CTL-025"
+      ]
+    },
+    {
+      "id": "7.1.6",
+      "title_ko": "조직의 지식",
+      "title_en": "Organizational knowledge",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "KNW"
+      ],
+      "documented_info": [
+        "lesson_learned"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.1.6.1.1",
+      "title_ko": "경험 환류(good practice·교훈) 관리 및 지식 이전",
+      "title_en": "Organizational knowledge — Supplemental (shall)",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "KNW"
+      ],
+      "documented_info": [
+        "lesson_learned"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.1.6.1.2",
+      "title_ko": "조직 지식 관리 프로세스",
+      "title_en": "Organizational knowledge management process",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "KNW"
+      ],
+      "documented_info": [
+        "lesson_learned"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.2",
+      "title_ko": "역량",
+      "title_en": "Competence",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "CMP"
+      ],
+      "documented_info": [
+        "competence_record"
+      ],
+      "modules": [
+        "rqms.services.competence"
+      ],
+      "controls": [
+        "CTL-026"
+      ]
+    },
+    {
+      "id": "7.2.1.1",
+      "title_ko": "역량 관리 프로세스(갭 식별·교육·이해 증거)",
+      "title_en": "Competence management process",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "CMP"
+      ],
+      "documented_info": [
+        "competence_record",
+        "training_record",
+        "competence_matrix"
+      ],
+      "modules": [
+        "rqms.services.competence"
+      ],
+      "controls": [
+        "CTL-026"
+      ]
+    },
+    {
+      "id": "7.2.1.2",
+      "title_ko": "역량 매트릭스 및 교육자료 정기 검토",
+      "title_en": "Competence — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "CMP"
+      ],
+      "documented_info": [
+        "competence_matrix"
+      ],
+      "modules": [
+        "rqms.services.competence"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.3",
+      "title_ko": "인식",
+      "title_en": "Awareness",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "CMP",
+        "COM"
+      ],
+      "documented_info": [
+        "training_record"
+      ],
+      "modules": [
+        "rqms.services.competence"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.4",
+      "title_ko": "의사소통",
+      "title_en": "Communication",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "COM"
+      ],
+      "documented_info": [
+        "communication_plan"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.4.1",
+      "title_ko": "의사소통 관리 프로세스",
+      "title_en": "Communication management process",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "COM"
+      ],
+      "documented_info": [
+        "communication_plan"
+      ],
+      "modules": [
+        "rqms.services.support"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.5.1",
+      "title_ko": "문서화된 정보 — 일반",
+      "title_en": "Documented information — General",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DIC"
+      ],
+      "documented_info": [
+        "document_register"
+      ],
+      "modules": [
+        "rqms.services.documents"
+      ],
+      "controls": []
+    },
+    {
+      "id": "7.5.2",
+      "title_ko": "문서화된 정보의 작성 및 갱신",
+      "title_en": "Creating and updating",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DIC"
+      ],
+      "documented_info": [
+        "document_register"
+      ],
+      "modules": [
+        "rqms.services.documents"
+      ],
+      "controls": [
+        "CTL-001"
+      ]
+    },
+    {
+      "id": "7.5.3.1",
+      "title_ko": "문서화된 정보의 가용성 및 보호",
+      "title_en": "Control of documented information — availability and protection",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DIC"
+      ],
+      "documented_info": [
+        "document_register"
+      ],
+      "modules": [
+        "rqms.services.documents"
+      ],
+      "controls": [
+        "CTL-002"
+      ]
+    },
+    {
+      "id": "7.5.3.2",
+      "title_ko": "배포·저장·변경관리·보존 및 기록 무결성",
+      "title_en": "Control of documented information — activities",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "DIC"
+      ],
+      "documented_info": [
+        "document_register",
+        "retention_schedule"
+      ],
+      "modules": [
+        "rqms.services.documents"
+      ],
+      "controls": [
+        "CTL-002",
+        "CTL-003"
+      ]
+    },
+    {
+      "id": "7.5.3.3",
+      "title_ko": "문서화된 정보 관리 프로세스(계층·권한·기록유형과 보존기간)",
+      "title_en": "Control of documented information — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "DIC"
+      ],
+      "documented_info": [
+        "document_register",
+        "retention_schedule",
+        "document_hierarchy"
+      ],
+      "modules": [
+        "rqms.services.documents"
+      ],
+      "controls": [
+        "CTL-001",
+        "CTL-002",
+        "CTL-003"
+      ]
+    }
+  ]
+}
