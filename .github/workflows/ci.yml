@@ -8,12 +8,17 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 지원 최소 버전과 최신 버전을 모두 검증한다(pyproject requires-python).
+        python-version: ["3.9", "3.11", "3.13"]
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: ${{ matrix.python-version }}
 
       - name: 레지스트리 정합성 및 통제 테스트
         run: python -m unittest discover -s tests -v

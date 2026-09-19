@@ -9,7 +9,7 @@ from __future__ import annotations
 import json
 from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, Optional
 
 from .db import Database, today
 from .services import (
@@ -53,7 +53,9 @@ class Finding:
 
 
 #: 점검 함수 시그니처: (db, as_of) -> 위반 상세 문자열 목록
-CheckFn = Callable[[Database, str | None], list[str]]
+#: 이 별칭은 애노테이션이 아니라 런타임에 평가되므로, Python 3.9 를 지원하기 위해
+#: PEP 604 (`str | None`) 대신 `Optional[str]` 을 쓴다.
+CheckFn = Callable[[Database, Optional[str]], list[str]]
 
 
 # ------------------------------------------------------------------- 4장 / 5장

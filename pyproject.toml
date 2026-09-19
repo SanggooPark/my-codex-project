@@ -7,7 +7,7 @@ name = "rqms"
 version = "1.0.0"
 description = "ISO 22163:2023 기반 철도용 품질경영시스템(RQMS)"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.9"
 license = { text = "Proprietary" }
 keywords = ["ISO 22163", "IRIS", "railway", "quality management system", "RQMS"]
 dependencies = []
@@ -29,7 +29,7 @@ rqms = ["data/*.json", "data/*.sql", "data/clauses/*.json"]
 
 [tool.ruff]
 line-length = 110
-target-version = "py311"
+target-version = "py39"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "SIM"]

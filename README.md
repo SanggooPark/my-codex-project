@@ -19,7 +19,10 @@ ISO 22163:2023 *Railway applications — Railway quality management system* 의
 
 ## 빠른 시작
 
+**요구사항: Python 3.9 이상. 외부 라이브러리 의존성은 없습니다.**
+
 ```bash
+python3 --version                          # 3.9 미만이면 상위 버전 인터프리터를 사용하십시오
 export PYTHONPATH=src                      # 또는 pip install -e .
 
 python -m rqms init --db rqms.db --seed    # DB 생성 + 시연 조직 데이터 구축
@@ -210,7 +213,8 @@ export PYTHONPATH=src
 python -m unittest discover -s tests -v
 ```
 
-표준 라이브러리만 사용하므로 별도 설치가 필요하지 않습니다. 테스트는 통제가 실제로
+표준 라이브러리만 사용하므로 별도 설치가 필요하지 않습니다. CI 는 Python 3.9 / 3.11 /
+3.13 에서 동일하게 검증합니다. 테스트는 통제가 실제로
 위반을 거부하는지, 시연 시스템이 갭 0 을 유지하는지, 레지스트리 정합성이 깨지지 않는지를
 검증합니다.
 
