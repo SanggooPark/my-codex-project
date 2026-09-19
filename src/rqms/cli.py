@@ -348,6 +348,14 @@ def cmd_report(args: argparse.Namespace) -> int:
         return 0
 
 
+def cmd_serve(args: argparse.Namespace) -> int:
+    """운영 웹 화면을 기동한다."""
+    from .web.server import serve
+
+    serve(args.db, host=args.host, port=args.port)
+    return 0
+
+
 def cmd_processes(args: argparse.Namespace) -> int:
     with _db(args) as db:
         rows = conformity.process_matrix(db)
@@ -446,6 +454,16 @@ def build_parser() -> argparse.ArgumentParser:
     add_common(p_report)
     p_report.add_argument("--out", default="rqms-report.html", help="출력 파일")
     p_report.set_defaults(func=cmd_report)
+
+    p_serve = sub.add_parser("serve", help="운영 웹 화면 기동 (브라우저에서 입력·조회)")
+    p_serve.add_argument("--db", default=DEFAULT_DB, help="데이터베이스 경로")
+    p_serve.add_argument(
+        "--host",
+        default="127.0.0.1",
+        help="바인드 주소 (기본 127.0.0.1 — 인증이 없으므로 외부 노출 금지)",
+    )
+    p_serve.add_argument("--port", type=int, default=8000, help="포트 (기본 8000)")
+    p_serve.set_defaults(func=cmd_serve)
 
     return parser
 
