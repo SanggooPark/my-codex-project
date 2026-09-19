@@ -26,6 +26,8 @@ python3 --version                          # 3.9 미만이면 상위 버전 인�
 export PYTHONPATH=src                      # 또는 pip install -e .
 
 python -m rqms init --db rqms.db --seed    # DB 생성 + 시연 조직 데이터 구축
+                                           # (이미 구축된 DB 에 다시 실행하면 중복을
+                                           #  방지하기 위해 거부됩니다. 재구축은 --reset)
 python -m rqms conformity --db rqms.db     # 조항별 적합성 평가
 python -m rqms check --db rqms.db          # 통제 상태 점검
 python -m rqms report --db rqms.db --out rqms-report.html
@@ -245,7 +247,7 @@ python -m rqms matrix process --db rqms.db
 
 | 명령 | 용도 |
 | --- | --- |
-| `init --seed` | DB 생성 및 시연 RQMS 구축 |
+| `init [--seed] [--reset]` | DB 생성 및 시연 RQMS 구축 (`--reset` 은 기존 파일 삭제 후 재구축) |
 | `conformity` | 조항별 적합성 평가 및 갭 목록 (갭이 있으면 종료코드 1) |
 | `check [--control ID]` | audit 통제 상태 점검 |
 | `matrix clause\|control\|process` | 추적성 매트릭스 |

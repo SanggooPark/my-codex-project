@@ -83,13 +83,38 @@ def _table(rows: list[dict[str, Any]], columns: list[str]) -> None:
 def cmd_init(args: argparse.Namespace) -> int:
     path = Path(args.db)
     existed = path.exists()
+
+    if args.seed and existed and args.reset:
+        path.unlink()
+        print(f"기존 데이터베이스 삭제: {path}")
+        existed = False
+
     db = open_database(path, create=True)
     print(f"데이터베이스 {'갱신' if existed else '생성'}: {path}")
+
     if args.seed:
+        # 시연 데이터 구축은 실제 서비스 API 를 호출하므로 두 번 실행하면 동일한
+        # 사번·문서번호가 중복 삽입되어 UNIQUE 제약에 걸린다. 사용자가 원인을
+        # 추측하지 않도록 통제 위반과 같은 방식으로 미리 막는다.
+        seeded = db.count("SELECT COUNT(*) FROM person")
+        if seeded:
+            db.close()
+            print(
+                f"\n이미 시연 데이터가 있는 데이터베이스입니다 (인원 {seeded}명).\n"
+                "  중복 구축은 사번·문서번호 충돌을 일으키므로 중단했습니다.\n"
+                "\n  다시 구축하려면:\n"
+                f"    python -m rqms init --db {path} --seed --reset   # 기존 데이터 삭제 후 재구축\n"
+                "\n  기존 데이터를 그대로 쓰려면 init 없이 바로 사용하십시오:\n"
+                f"    python -m rqms serve --db {path}\n"
+                f"    python -m rqms conformity --db {path}",
+                file=sys.stderr,
+            )
+            return 2
         summary = build(db)
         print("시연 데이터 구축 완료:")
         for key, value in summary.items():
             print(f"  - {key}: {value}")
+
     db.close()
     return 0
 
@@ -411,6 +436,11 @@ def build_parser() -> argparse.ArgumentParser:
     p_init = sub.add_parser("init", help="데이터베이스 생성 및 시연 데이터 구축")
     p_init.add_argument("--db", default=DEFAULT_DB, help="데이터베이스 경로")
     p_init.add_argument("--seed", action="store_true", help="시연용 RQMS 데이터 구축")
+    p_init.add_argument(
+        "--reset",
+        action="store_true",
+        help="--seed 와 함께: 기존 데이터베이스 파일을 삭제하고 처음부터 다시 구축",
+    )
     p_init.set_defaults(func=cmd_init)
 
     p_conf = sub.add_parser("conformity", help="조항별 적합성 평가 및 갭 보고")

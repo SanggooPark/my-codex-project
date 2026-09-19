@@ -8,7 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from contextlib import redirect_stdout
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 from rqms import checks, cli, report
@@ -20,6 +20,7 @@ from rqms.conformity import (
     traceability_matrix,
 )
 from rqms.db import Database, open_database
+from rqms.errors import NotFound
 from rqms.seed import build
 from rqms.standard import load_registry
 
@@ -267,6 +268,52 @@ class CliTest(unittest.TestCase):
             code, _ = self.run_cli("report", "--out", str(out_path))
             self.assertEqual(code, 0)
             self.assertTrue(out_path.exists())
+
+
+class InitCommandTest(unittest.TestCase):
+    """init 은 같은 DB 에 두 번 구축해 UNIQUE 충돌로 죽으면 안 된다."""
+
+    def setUp(self) -> None:
+        self._dir = tempfile.TemporaryDirectory()
+        self.path = Path(self._dir.name) / "init.db"
+
+    def tearDown(self) -> None:
+        self._dir.cleanup()
+
+    def run_cli(self, *args: str) -> tuple[int, str]:
+        buffer = io.StringIO()
+        errors = io.StringIO()
+        with redirect_stdout(buffer), redirect_stderr(errors):
+            code = cli.main([*args, "--db", str(self.path)])
+        return code, buffer.getvalue() + errors.getvalue()
+
+    def test_seed_twice_is_refused_with_guidance(self) -> None:
+        self.assertEqual(self.run_cli("init", "--seed")[0], 0)
+
+        code, out = self.run_cli("init", "--seed")
+        self.assertEqual(code, 2)
+        self.assertIn("이미 시연 데이터가 있는", out)
+        self.assertIn("--reset", out)
+
+        # 거부되었을 뿐 기존 데이터는 그대로여야 한다.
+        with Database(str(self.path)) as db:
+            self.assertEqual(db.count("SELECT COUNT(*) FROM person"), 22)
+
+    def test_reset_rebuilds_from_scratch(self) -> None:
+        self.assertEqual(self.run_cli("init", "--seed")[0], 0)
+        code, out = self.run_cli("init", "--seed", "--reset")
+        self.assertEqual(code, 0)
+        self.assertIn("시연 데이터 구축 완료", out)
+        with Database(str(self.path)) as db:
+            self.assertEqual(db.count("SELECT COUNT(*) FROM person"), 22)
+
+    def test_init_without_seed_is_idempotent(self) -> None:
+        self.assertEqual(self.run_cli("init")[0], 0)
+        self.assertEqual(self.run_cli("init")[0], 0)
+
+    def test_open_database_refuses_missing_file(self) -> None:
+        with self.assertRaises(NotFound):
+            open_database(Path(self._dir.name) / "없음.db")
 
 
 class GeneratedDocsTest(unittest.TestCase):

@@ -133,10 +133,16 @@ def seal_of(values: Iterable[Any]) -> str:
 
 
 def open_database(path: str | Path, *, create: bool = False) -> Database:
-    """데이터베이스를 연다. create=True 이면 스키마를 생성한다."""
+    """데이터베이스를 연다.
+
+    create=False 인데 파일이 없으면, 빈 DB 를 조용히 만들어 "기록이 하나도 없다"는
+    오해를 주는 대신 오류를 낸다(경로 오타를 조기에 드러낸다).
+    """
+    if not create and str(path) != ":memory:" and not Path(str(path)).exists():
+        raise NotFound(
+            f"데이터베이스 {path} 가 없습니다. 먼저 `python -m rqms init --db {path}` 를 실행하십시오."
+        )
     db = Database(path)
-    if create or path == ":memory:" or not Path(str(path)).exists():
-        db.init_schema()
-    else:
-        db.init_schema()  # CREATE TABLE IF NOT EXISTS — 멱등
+    # 스키마는 CREATE TABLE IF NOT EXISTS 로 작성되어 있어 멱등하다.
+    db.init_schema()
     return db
