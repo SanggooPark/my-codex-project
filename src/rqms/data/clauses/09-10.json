@@ -1,0 +1,454 @@
+{
+  "_comment": "ISO 22163:2023 9장(성과평가) 및 10장(개선) 요구사항 레지스트리.",
+  "clauses": [
+    {
+      "id": "9.1.1",
+      "title_ko": "모니터링, 측정, 분석 및 평가 — 일반",
+      "title_en": "Monitoring, measurement, analysis and evaluation — General",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "measurement_record"
+      ],
+      "modules": [
+        "rqms.services.indicators"
+      ],
+      "controls": []
+    },
+    {
+      "id": "9.1.1.1.1",
+      "title_ko": "PI 식별·정의(관련프로세스·산식·목표·측정자·보고·조치책임자·데이터원)",
+      "title_en": "Monitoring and measurement — Supplemental (PIs)",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [],
+      "documented_info": [
+        "kpi_definition",
+        "measurement_record",
+        "failure_data_record"
+      ],
+      "modules": [
+        "rqms.services.indicators"
+      ],
+      "controls": [
+        "CTL-056",
+        "CTL-041"
+      ]
+    },
+    {
+      "id": "9.1.1.1.2",
+      "title_ko": "권고 PI(응답시간·생산능력·문제해결시간·설비비가동)",
+      "title_en": "PIs — recommended measures",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [],
+      "documented_info": [
+        "measurement_record"
+      ],
+      "modules": [
+        "rqms.services.indicators"
+      ],
+      "controls": []
+    },
+    {
+      "id": "9.1.2",
+      "title_ko": "고객만족",
+      "title_en": "Customer satisfaction",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "CSA"
+      ],
+      "documented_info": [
+        "customer_satisfaction_record"
+      ],
+      "modules": [
+        "rqms.services.customer"
+      ],
+      "controls": []
+    },
+    {
+      "id": "9.1.2.1",
+      "title_ko": "고객 불만 관리(기록·공유·접수통보 및 시정조치 소통)",
+      "title_en": "Customer satisfaction — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "CSA",
+        "NCA"
+      ],
+      "documented_info": [
+        "complaint_record"
+      ],
+      "modules": [
+        "rqms.services.customer"
+      ],
+      "controls": [
+        "CTL-053"
+      ]
+    },
+    {
+      "id": "9.1.3",
+      "title_ko": "분석 및 평가",
+      "title_en": "Analysis and evaluation",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "analysis_record"
+      ],
+      "modules": [
+        "rqms.services.indicators"
+      ],
+      "controls": []
+    },
+    {
+      "id": "9.1.3.1",
+      "title_ko": "전 데이터 분석·KPI 목표 미달 시 시정조치·추세 제시·이해관계자 공유",
+      "title_en": "Analysis and evaluation — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "NCA"
+      ],
+      "documented_info": [
+        "analysis_record",
+        "corrective_action_record"
+      ],
+      "modules": [
+        "rqms.services.indicators"
+      ],
+      "controls": [
+        "CTL-020"
+      ]
+    },
+    {
+      "id": "9.2.1",
+      "title_ko": "내부심사 실시(적합성·효과적 실행 확인)",
+      "title_en": "Internal audit",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "IAU"
+      ],
+      "documented_info": [
+        "audit_report"
+      ],
+      "modules": [
+        "rqms.services.audit"
+      ],
+      "controls": []
+    },
+    {
+      "id": "9.2.2",
+      "title_ko": "심사 프로그램 수립·심사기준·객관성·보고·시정조치·기록",
+      "title_en": "Internal audit — programme requirements",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "IAU"
+      ],
+      "documented_info": [
+        "audit_programme",
+        "audit_report"
+      ],
+      "modules": [
+        "rqms.services.audit"
+      ],
+      "controls": [
+        "CTL-022"
+      ]
+    },
+    {
+      "id": "9.2.3.1",
+      "title_ko": "내부심사 관리 프로세스(프로그램 관리·심사원 관리·경험환류)",
+      "title_en": "Internal audit management process",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "IAU",
+        "KNW"
+      ],
+      "documented_info": [
+        "audit_programme",
+        "audit_report"
+      ],
+      "modules": [
+        "rqms.services.audit"
+      ],
+      "controls": [
+        "CTL-021",
+        "CTL-022"
+      ]
+    },
+    {
+      "id": "9.2.3.2",
+      "title_ko": "연간 심사 프로그램(전 프로세스 3년 내 최소 1회·자기업무 심사금지·교대 포함)",
+      "title_en": "Audit programme",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "IAU"
+      ],
+      "documented_info": [
+        "audit_programme"
+      ],
+      "modules": [
+        "rqms.services.audit"
+      ],
+      "controls": [
+        "CTL-021",
+        "CTL-022"
+      ]
+    },
+    {
+      "id": "9.2.3.3.1",
+      "title_ko": "심사팀 역량(심사원칙·심사범위·해당 조항·심사기준 지식 및 경험)",
+      "title_en": "Auditors management",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "IAU",
+        "CMP"
+      ],
+      "documented_info": [
+        "auditor_qualification_record"
+      ],
+      "modules": [
+        "rqms.services.audit"
+      ],
+      "controls": [
+        "CTL-055"
+      ]
+    },
+    {
+      "id": "9.2.3.3.2",
+      "title_ko": "심사원 선임·피심사자 평가·심사원 명부 유지",
+      "title_en": "Auditors management — additional",
+      "obligation": "should",
+      "source": "iso22163",
+      "processes": [
+        "IAU"
+      ],
+      "documented_info": [
+        "auditor_qualification_record"
+      ],
+      "modules": [
+        "rqms.services.audit"
+      ],
+      "controls": []
+    },
+    {
+      "id": "9.3.1",
+      "title_ko": "경영검토 — 일반",
+      "title_en": "Management review — General",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "management_review_record"
+      ],
+      "modules": [
+        "rqms.services.review"
+      ],
+      "controls": []
+    },
+    {
+      "id": "9.3.1.1",
+      "title_ko": "연 1회 경영검토 및 중대 품질사고 시 추가 경영검토",
+      "title_en": "Management review — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [],
+      "documented_info": [
+        "management_review_record"
+      ],
+      "modules": [
+        "rqms.services.review"
+      ],
+      "controls": [
+        "CTL-023"
+      ]
+    },
+    {
+      "id": "9.3.2",
+      "title_ko": "경영검토 입력",
+      "title_en": "Management review inputs",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "management_review_record"
+      ],
+      "modules": [
+        "rqms.services.review"
+      ],
+      "controls": [
+        "CTL-054"
+      ]
+    },
+    {
+      "id": "9.3.2.1",
+      "title_ko": "프로젝트검토 핵심이슈·프로세스검토 결과·전 KPI/PI 분석·안전영향·사업계획 출력",
+      "title_en": "Management review inputs — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [],
+      "documented_info": [
+        "management_review_record"
+      ],
+      "modules": [
+        "rqms.services.review"
+      ],
+      "controls": [
+        "CTL-054"
+      ]
+    },
+    {
+      "id": "9.3.3",
+      "title_ko": "경영검토 출력",
+      "title_en": "Management review outputs",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [],
+      "documented_info": [
+        "management_review_record"
+      ],
+      "modules": [
+        "rqms.services.review"
+      ],
+      "controls": []
+    },
+    {
+      "id": "9.3.3.1",
+      "title_ko": "목표달성(품질·안전)·고객만족 관련 결정, 미달 시 시정조치",
+      "title_en": "Management review outputs — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "NCA"
+      ],
+      "documented_info": [
+        "management_review_record",
+        "corrective_action_record"
+      ],
+      "modules": [
+        "rqms.services.review"
+      ],
+      "controls": [
+        "CTL-020"
+      ]
+    },
+    {
+      "id": "9.4",
+      "title_ko": "프로세스 검토(필수 프로세스 연 1회, 오너 주재, 최고경영자 보고)",
+      "title_en": "Process reviews",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [],
+      "documented_info": [
+        "process_review_record"
+      ],
+      "modules": [
+        "rqms.services.review"
+      ],
+      "controls": [
+        "CTL-024"
+      ]
+    },
+    {
+      "id": "10.1",
+      "title_ko": "개선 — 일반",
+      "title_en": "Improvement — General",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "NCA",
+        "KNW"
+      ],
+      "documented_info": [
+        "improvement_record"
+      ],
+      "modules": [
+        "rqms.services.capa"
+      ],
+      "controls": []
+    },
+    {
+      "id": "10.2.1",
+      "title_ko": "부적합 발생 시 대응·원인제거 필요성 평가·조치·효과성 검토",
+      "title_en": "Nonconformity and corrective action",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "NCA"
+      ],
+      "documented_info": [
+        "corrective_action_record"
+      ],
+      "modules": [
+        "rqms.services.capa"
+      ],
+      "controls": [
+        "CTL-033"
+      ]
+    },
+    {
+      "id": "10.2.2",
+      "title_ko": "부적합의 성격·조치·시정조치 결과 문서화",
+      "title_en": "Nonconformity and corrective action — retained information",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "NCA"
+      ],
+      "documented_info": [
+        "corrective_action_record"
+      ],
+      "modules": [
+        "rqms.services.capa"
+      ],
+      "controls": []
+    },
+    {
+      "id": "10.2.3",
+      "title_ko": "부적합·시정조치 관리 프로세스(평가기준·문제해결기법·감시·에스컬레이션)",
+      "title_en": "Nonconformity and corrective action — Supplemental",
+      "obligation": "shall",
+      "source": "iso22163",
+      "processes": [
+        "NCA"
+      ],
+      "documented_info": [
+        "corrective_action_record"
+      ],
+      "modules": [
+        "rqms.services.capa"
+      ],
+      "controls": [
+        "CTL-033"
+      ]
+    },
+    {
+      "id": "10.3",
+      "title_ko": "지속적 개선",
+      "title_en": "Continual improvement",
+      "obligation": "shall",
+      "source": "iso9001",
+      "processes": [
+        "NCA",
+        "KNW"
+      ],
+      "documented_info": [
+        "improvement_record",
+        "management_review_record"
+      ],
+      "modules": [
+        "rqms.services.capa",
+        "rqms.services.review"
+      ],
+      "controls": []
+    }
+  ]
+}
